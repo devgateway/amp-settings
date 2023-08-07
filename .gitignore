@@ -1,7 +1,7 @@
 node/
-dist/
 node_modules/
 
+.npmrc
 node_modules
 .DS_Store
 src/compiled-js/
