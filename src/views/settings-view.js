@@ -59,6 +59,7 @@ module.exports = Backbone.View.extend({
 				this.appliedSettings = this.originalSettings;
 			}
 			this.settingsSelections[Constants.CALENDAR_ID] = this.definitions.findWhere({id : Constants.CALENDAR_ID }).get('value').defaultId;
+			this.settingsSelections[Constants.PROGRAM_SETTINGS] = this.definitions.findWhere({id : Constants.PROGRAM_SETTINGS }).get('value').defaultId;
 			this.settingsSelections[Constants.CURRENCY_ID] = this.definitions.findWhere({id : Constants.CURRENCY_ID }).get('value').defaultId;
 			if (this.caller === Constants.CONTEXT.REPORTS) {
                 this.settingsSelections[Constants.AMOUNT_UNIT_ID] = this.definitions.findWhere({id : Constants.AMOUNT_UNIT_ID }).get('value').defaultId;
@@ -99,6 +100,7 @@ module.exports = Backbone.View.extend({
 		if (this.caller !== Constants.CONTEXT.DASHBOARDS) {
 			this.appendSetting(Constants.FUNDING_TYPE_ID);
 		}
+		this.appendSetting(Constants.PROGRAM_SETTINGS);
 		this.appendYearRangeSetting();
 		this.translate(this.$el);
 	},

@@ -19,3 +19,6 @@ G
 src/common/constants.js,4/6/46dc3ecbe344b429a592649812a640ed6d36f23c
 D
 dist/amp-settings.js,5/4/54a28ba1a1a2ceb6913e5f5ff84640b75d5480d7
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
