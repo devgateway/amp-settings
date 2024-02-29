@@ -51,7 +51,7 @@ module.exports  = Backbone.Collection.extend({
 	getCurrencySetting: function(){
 		return this.get(Constants.CURRENCY_ID);
 	},
-	getProgramSettings: function(){
+	getProgramSetting: function(){
 		return this.get(Constants.PROGRAM_SETTINGS);
 	},
 	getAmountUnitsSetting: function(){
@@ -67,7 +67,7 @@ module.exports  = Backbone.Collection.extend({
 		return this.getCurrencySetting().get('value').defaultId;
 	},
 	getDefaultProgramSetting: function(){
-		return this.getProgramSettings().get('value').defaultId;
+		return this.getProgramSetting().get('value').defaultId;
 	},
 	getDefaultAmountUnitsId: function(){
 		return this.getAmountUnitsSetting().get('value').defaultId;

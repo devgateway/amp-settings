@@ -9,6 +9,8 @@ var SelectAmountUnitTemplate = fs.readFileSync(__dirname + '/../templates/select
 var YearRangeTemplate = fs.readFileSync(__dirname + '/../templates/year-range-template.html', 'utf8');
 var YearSelectTemplate = fs.readFileSync(__dirname + '/../templates/year-select-template.html', 'utf8');
 var Constants = require('../common/constants');
+const GisSettings = require("../models/gis-settings");
+var gisSettings = new GisSettings();
 
 module.exports = Backbone.View.extend({
 	template : _.template(Template),
@@ -100,7 +102,11 @@ module.exports = Backbone.View.extend({
 		if (this.caller !== Constants.CONTEXT.DASHBOARDS) {
 			this.appendSetting(Constants.FUNDING_TYPE_ID);
 		}
-		this.appendSetting(Constants.PROGRAM_SETTINGS);
+		console.log("Gis setting in amp.gis",gisSettings.gisSettings)
+		if (gisSettings.gisSettings.gis_programs_enabled ===true) {
+			this.appendSetting(Constants.PROGRAM_SETTINGS);
+		}
+
 		this.appendYearRangeSetting();
 		this.translate(this.$el);
 	},
