@@ -11,7 +11,6 @@ var YearSelectTemplate = fs.readFileSync(__dirname + '/../templates/year-select-
 var Constants = require('../common/constants');
 const GisSettings = require("../models/gis-settings");
 var gisSettings = new GisSettings();
-
 module.exports = Backbone.View.extend({
 	template : _.template(Template),
 	selectTemplate : _.template(SelectTemplate),
