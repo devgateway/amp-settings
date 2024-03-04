@@ -57,6 +57,6 @@
     "tag": "latest"
   },
   "dependencies": {
-    "amp-translate": "github:devgateway/amp-translate"
+    "amp-translate": "^0.0.1"
   }
 }
